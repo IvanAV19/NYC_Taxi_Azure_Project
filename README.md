@@ -43,26 +43,28 @@ El pipeline está diseñado bajo un enfoque ETL/ELT robusto y automatizado media
 # Estructura del Repositorio
 La organización del código sigue los estándares profesionales de la industria, aislando datos muestra, configuraciones de infraestructura y código productivo numerado secuencialmente:
 
-NYC_Taxi_Azure/
-├── assets/                                 
-│   └── pipeline_architecture.png           # Captura visual de la orquestación en Synapse
-├── data/
-│   └── sample/
-│       └── green_tripdata_2026-01.parquet  # Muestra de datos representativa para pruebas locales
-├── src/
-│   ├── notebooks/
-│   │   ├── 01_nyctaxiscrap.ipynb           # Extracción: Generación de catálogo maestro JSON
-│   │   ├── 02_Cuarentena.ipynb             # Capa Raw: Validación, tipado estricto y aislamiento
-│   │   ├── 03_ArchivosRejected.ipynb       # Ingesta: Gestión y registro indexado de errores de copia
-│   │   ├── 04_AnalisisTaxi.ipynb           # Capa Silver: Estandarización histórica y cruce geográfico
-│   │   ├── 05_Processed.ipynb              # Capa Gold: Modelos de Machine Learning y Forecasting
-│   │   ├── 06_ComprobarParquets.ipynb      # Auditoría: Análisis recursivo ad-hoc de integridad física
-│   │   └── 99_LimpiarCarpetasVacias.ipynb  # Mantenimiento: Purga dinámica de metadatos y nulos
-│   └── pipelines/
-│       ├── NycTaxi.json                    # Código declarativo del Pipeline de Synapse (actividades/flujos)
-│       └── manifest.json                   # Manifiesto de metadatos y conectores del Workspace
-├── requirements.txt                        # Dependencias de software del entorno de desarrollo
-└── README.md                               # Documentación principal del proyecto
+```text
+       NYC_Taxi_Azure/
+       ├── assets/                                 
+       │   └── pipeline_architecture.png           # Captura visual de la orquestación en Synapse
+       ├── data/
+       │   └── sample/
+       │       └── green_tripdata_2026-01.parquet  # Muestra de datos representativa para pruebas locales
+       ├── src/
+       │   ├── notebooks/
+       │   │   ├── 01_nyctaxiscrap.ipynb           # Extracción: Generación de catálogo maestro JSON
+       │   │   ├── 02_Cuarentena.ipynb             # Capa Raw: Validación, tipado estricto y aislamiento
+       │   │   ├── 03_ArchivosRejected.ipynb       # Ingesta: Gestión y registro indexado de errores de copia
+       │   │   ├── 04_AnalisisTaxi.ipynb           # Capa Silver: Estandarización histórica y cruce geográfico
+       │   │   ├── 05_Processed.ipynb              # Capa Gold: Modelos de Machine Learning y Forecasting
+       │   │   ├── 06_ComprobarParquets.ipynb      # Auditoría: Análisis recursivo ad-hoc de integridad física
+       │   │   └── 99_LimpiarCarpetasVacias.ipynb  # Mantenimiento: Purga dinámica de metadatos y nulos
+       │   └── pipelines/
+       │       ├── NycTaxi.json                    # Código declarativo del Pipeline de Synapse (actividades/flujos)
+       │       └── manifest.json                   # Manifiesto de metadatos y conectores del Workspace
+       ├── requirements.txt                        # Dependencias de software del entorno de desarrollo
+       └── README.md                               # Documentación principal del proyecto
+```
 
 ---
 
