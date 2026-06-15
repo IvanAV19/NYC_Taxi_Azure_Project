@@ -1,0 +1,5 @@
+# Dependencias principales de datos y ML
+pyspark>=3.5.0
+
+# Dependencias para peticiones web (Capa Silver)
+requests>=2.31.0
